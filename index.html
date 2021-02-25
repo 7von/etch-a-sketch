@@ -9,16 +9,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
 </head>
 <body>
-    <div id =  "main-container">
-        <div class = "title"> Welcome to Etch-A-Sketch!</div>
-        <div id = "btn">
-            <button class = "btn">Reset</button>
-            <button class = "btn">Black</button>
-            <button class = "btn">RGB</button>
+    <div id = "main-container">
+        <div id = "content-wrap">
+            
+            <div id = "btn">
+                <button id = "reset" class = "btn">Reset</button>
+                <button class = "btn">Black</button>
+                <button id = "colorBtn" class = "btn">RGB</button>
+                <div class="slidecontainer">
+                    <input id = "slider" class = "grid-selector" type = "range" value = "16"min="1" max = "16">
+                </div>
+            </div>
+            <div class = sketchBorder>
+                <p style="color: aliceblue; font-size: 2rem;" class = "title">Etch-A-Sketch</p>
+                <table id = "grid"></table>
+            </div>
         </div>
-        <div id = "grid"></div>
+        <footer id = "cevon-Signature"> Made By <a href="" target="_blank"><img src="">Cevon Sieh</a></footer>
     </div>
-    <footer id = "cevon-Signature"> Made By <a href="" target="_blank"><img src="">Cevon Sieh</a></footer>
+    
     <script src="app.js"></script>
 </body>
 </html>
