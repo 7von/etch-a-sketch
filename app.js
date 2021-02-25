@@ -1,12 +1,15 @@
 /*--  Variables  --*/
 let tbl = document.getElementById('grid');
+
 let inputValue = document.getElementById('slider')//assign inputValue to the ID 
 inputValue.oninput = function() {   //this will update our slider value
     inputValue = this.value
 }
+
 let colorBtn = document.getElementById('colorBtn').addEventListener('click', () => {
     square.changeColor()
 });
+
 let reset = document.getElementById('reset')
 
 /*--  Functions  --*/
@@ -46,15 +49,14 @@ changeGrid = (a) => {
         for (var j = 0; j < a; j++) {
             let square = document.createElement('td');
             square.id = "square";
-            square.addEventListener("click", function(event){
-                square.addEventListener("mouseover", (e) => {event.target.style.backgroundColor = 'black';})
-            })
+            square.addEventListener("mouseover", (event) => {event.target.style.backgroundColor = 'black';})
+        
             roww.appendChild(square);
         }
       }
     }
 
-//Removes the nodes that are currently in the grid
+//Removes the nodes that are currently in the grid so we do not keep adding
 removeAllChildNodes = (parent) => {
         while(parent.firstChild){
             parent.removeChild(parent.firstChild);
