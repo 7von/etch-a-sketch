@@ -1,11 +1,24 @@
+@font-face {
+    font-family: "Pokemon GB";
+    src: url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.eot?") format("eot"),
+         url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.woff") format("woff"),
+         url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.ttf") format("truetype"),
+         url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.svg#PokemonGB") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 html, body {
     background-image: linear-gradient(to bottom right, red, yellow);
     margin: 0;
+    font-style: "Pokemon GB"1;
 }
 
 table {
     border-spacing: 0;
 }
+
+
 
 #main-container {
     position: relative;
@@ -29,8 +42,13 @@ table {
 
 #btn{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#buttons {
+    display: flex;
 }
 
 .btn {
@@ -42,6 +60,7 @@ table {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
     outline: none;
+    height: 4rem;
 }
 .btn:hover {
     background-color: white;
@@ -62,7 +81,16 @@ table {
     color: black;
 }
 
-/*-- Grid Items --*/
+.btn #size{
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: black;
+    border: black solid 0 2px 2px 0;
+    width: auto;
+    font-size: .6rem;
+}
+/*-- Grid Items to create the grid --*/
 .sketchBorder{
     background-color: black;
     border-radius: 5%;
@@ -93,7 +121,10 @@ table {
 
 /*----- Slider -----*/
 .slidecontainer {
-    width: 100%; 
+    width: 60%; 
+    display:flex;
+    flex-direction: row;
+    align-items: center;
   }
 
 .grid-selector {

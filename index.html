@@ -11,11 +11,18 @@
 <body>
     <div id = "main-container">
         <div id = "content-wrap">
-            
             <div id = "btn">
-                <button id = "reset" class = "btn">Reset</button>
-                <button class = "btn">Black</button>
-                <button id = "colorBtn" class = "btn">RGB</button>
+                <div id = "buttons">   
+                    <button id = "reset" class = "btn">Reset</button>
+                    <button id = "blackBtn" class = "btn">Black</button>
+                    <button id = "colorBtn" class = "btn">
+                        RGB
+                        <input type = "color" id = "color">
+                    </button>
+                    <div class = "btn">
+                        <div id ="size">Size</div>Hello
+                    </div>
+                </div> 
                 <div class="slidecontainer">
                     <input id = "slider" class = "grid-selector" type = "range" value = "16"min="1" max = "16">
                 </div>
